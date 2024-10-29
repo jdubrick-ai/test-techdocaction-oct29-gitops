@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-techdocaction-oct29-database-config
+data:
+  VECTORDB_HOST: "test-techdocaction-oct29-database"
+  VECTORDB_PORT: ""

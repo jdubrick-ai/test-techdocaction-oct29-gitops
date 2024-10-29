@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: test-techdocaction-oct29-gitops
+  description: This is GitOps manifest for test-techdocaction-oct29   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: test-techdocaction-oct29
+    janus-idp.io/tekton: test-techdocaction-oct29 
+    backstage.io/kubernetes-id: test-techdocaction-oct29 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:test-techdocaction-oct29
